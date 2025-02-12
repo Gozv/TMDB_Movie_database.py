@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ movie.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-button">← Volver</a>
+        <div class="movie-details">
+            <div class="movie-poster">
+                {% if movie.poster_path %}
+                    <img src="https://image.tmdb.org/t/p/w300{{ movie.poster_path }}" alt="{{ movie.title }}">
+                {% endif %}
+            </div>
+            <div class="movie-info">
+                <h1>{{ movie.title }}</h1>
+                <p class="tagline">{{ movie.tagline }}</p>
+                <p>{{ movie.overview }}</p>
+                <div class="facts">
+                    <p>📅 Lanzamiento: {{ movie.release_date }}</p>
+                    <p>⭐ Puntuación: {{ movie.vote_average }}/10</p>
+                    <p>⏱️ Duración: {{ movie.runtime }} minutos</p>
+                </div>
+                <h2>Reparto Principal</h2>
+                <div class="cast">
+                    {% for actor in movie.credits.cast[:5] %}
+                        <div class="actor">
+                            <p>{{ actor.name }}</p>
+                            <p class="character">{{ actor.character }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultados de Búsqueda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultados para: "{{ query }}"</h1>
+        <div class="movie-grid">
+            {% for movie in results %}
+                <div class="movie-card">
+                    <a href="{{ url_for('movie_details', movie_id=movie.id) }}">
+                        {% if movie.poster_path %}
+                            <img src="https://image.tmdb.org/t/p/w200{{ movie.poster_path }}" alt="{{ movie.title }}">
+                        {% else %}
+                            <div class="no-poster">Sin imagen</div>
+                        {% endif %}
+                        <h3>{{ movie.title }}</h3>
+                        <p>{{ movie.release_date[:4] if movie.release_date else 'Año desconocido' }}</p>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
