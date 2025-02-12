@@ -20,5 +20,5 @@ Aplicación web para explorar películas usando la API de TMDB. Perfecta para de
 ## 📦 Instalación
 1. Clona el repositorio:
 ```bash
-git clone https://github.com/tu-usuario/movie-explorer.git
+git clone https://github.com/Gozv/TMDB_Movie_database.py.git
 cd movie-explorer
