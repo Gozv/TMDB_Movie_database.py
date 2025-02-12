@@ -17,8 +17,22 @@ Aplicación web para explorar películas usando la API de TMDB. Perfecta para de
 - **API**: The Movie Database (TMDB)
 - **Herramientas**: Git, dotenv, requests
 
+🛠️ Mejoras Futuras
+Implementar caché con Redis
+
+Añadir autenticación de usuarios
+
+Sistema de favoritos
+
+Paginación de resultados
+
+Pruebas unitarias con pytest
+
+📄 Licencia
+
 ## 📦 Instalación
 1. Clona el repositorio:
 ```bash
 git clone https://github.com/Gozv/TMDB_Movie_database.py.git
 cd movie-explorer
+
