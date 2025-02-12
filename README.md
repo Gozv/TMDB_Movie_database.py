@@ -28,8 +28,6 @@ Paginación de resultados
 
 Pruebas unitarias con pytest
 
-📄 Licencia
-
 ## 📦 Instalación
 1. Clona el repositorio:
 ```bash
